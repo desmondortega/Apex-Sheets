@@ -1,5 +1,6 @@
 "use client"
 
+import Footer from '@/components/footer/Footer';
 import './globals.css'
 import Navbar from "@/components/navbar/Navbar";
 import { useEffect, useState } from 'react';
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
         <div className={`${!isMobile ? 'ml-10 mt-12' : 'mt-32'}`}>
           {children}
         </div>
+        <Footer />
       </div>
     </html>
   );
