@@ -14,6 +14,9 @@ module.exports = {
       },
       fontSize: {
         'xxs': '0.6rem',
+      },
+      colors: {
+        'apex-green': '#8abe52',
       }
     },
   },
