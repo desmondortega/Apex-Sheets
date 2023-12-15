@@ -27,9 +27,6 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container ml-6">
-      <Navbar isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className={`${!isMobile ? 'ml-8 mt-12' : 'mt-32'}`}>Hello World!</div>
-    </div>
+    <div>Home</div>
   )
 }
