@@ -31,12 +31,12 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <div className="container ml-6">
+      <div>
         <Navbar isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
-        <div className={`${!isMobile ? 'ml-10 mt-12' : 'mt-32'}`}>
+        <div className={`${!isMobile ? 'mt-12 ml-12' : 'mt-32'}`}>
           {children}
         </div>
-        <Footer />
+        <Footer className={"mt-40"} />
       </div>
     </html>
   );
