@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .navbar__logo {
+    height: 50px;
+  }
+  
+  .navbar__links {
+    list-style-type: none;
+  }
+  
+  .navbar__links li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .navbar__links a {
+    text-decoration: none;
+    color: black;
+  }
