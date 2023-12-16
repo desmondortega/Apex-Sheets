@@ -1,5 +1,6 @@
 import { FiMenu, FiX } from 'react-icons/fi';
 import Link from 'next/link';
+import Image from 'next/image'
 
 const Navbar = ({ isMobile, isOpen, setIsOpen }) => {
     const navbarStyle = {
@@ -25,7 +26,7 @@ const Navbar = ({ isMobile, isOpen, setIsOpen }) => {
             }
             <div>
                 <nav style={navbarStyle} className={`${isMobile ? 'fixed inset-0 flex-col bg-apex-green space-y-4 w-full text-white' : `mx-12 my-8 justify-between text-gray-600`} flex items-center`}>
-                    <img src={`${isMobile ? "logo-white-no-background.png" : "/logo-no-background.png"}`} alt="Logo" className={`${isMobile ? "h-48 mt-16" : "h-16"}`} />
+                    <img src={`${isMobile ? "logo-white-no-background.png" : "/logo-no-background.png"}`} alt="Logo" className={`${isMobile ? "h-48 mt-16" : "h-16"}` } />
                     <ul className={`${isMobile ? 'flex flex-col pt-12 space-y-20 text-center' : 'flex space-x-16'} list-none`}>
                         <li className={`${isMobile ? 'text-3xl' : 'text-lg'} inline-block mx-4 no-underline`}>
                             <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>

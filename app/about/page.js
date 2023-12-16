@@ -8,7 +8,7 @@ export default function About() {
             <div className="w-full sm:w-3/4 flex flex-col justify-center space-y-4 sm:py-20 sm:px-32 pb-20 px-8 sm:min-w-[500px] min-w-[100px]">
                 <h1 className={`text-4xl text-apex-green`}>Meet Your Virtual Bookkeeper</h1>
                 <h2 className={`text-2xl text-gray-800`}>Desmond Ortega</h2>
-                <p className={`text-sm text-gray-600`}>Based in Los Angeles, CA and currently serving as the Finance Manager for a fast-growing wound care company. In my role, I help manage all financial and accounting related tasks, including bookkeeping for the company. I received my B.S. in Business Administration in 2018, and I am expected to receive my MBA in Accounting in August of 2023. Now I'm ready to use my skills to aid small business owners, like you, have peace of mind when it comes to your business's finances.</p>
+                <p className={`text-sm text-gray-600`}>Based in Los Angeles, CA and currently serving as the Finance Manager for a fast-growing wound care company. In my role, I help manage all financial and accounting related tasks, including bookkeeping for the company. I received my B.S. in Business Administration in 2018, and I am expected to receive my MBA in Accounting in August of 2023. Now I&apos;m ready to use my skills to aid small business owners, like you, have peace of mind when it comes to your business&apos;s finances.</p>
                 <p className={`pt-12 text-sm text-gray-600`}><u>Why outsource your bookkeeping services?</u></p>
                 <ul>
                     <li className={`text-sm text-gray-600 flex items-center`}><FaCheck  className='mr-2'/> <span>No more late nights of date entry and tedious bookkeeping work</span></li>
