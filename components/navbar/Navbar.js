@@ -18,8 +18,8 @@ const Navbar = ({ isMobile, isOpen, setIsOpen }) => {
                 </button>
             }
             <div>
-                <nav style={navbarStyle} className={`${isMobile ? 'fixed inset-0 flex-col bg-white space-y-4 h-screen mt-16 w-full' : `mx-12 my-8 justify-between`} flex items-center bg-gray-100 text-gray-600`}>
-                    <img src="/logo-no-background.png" alt="Logo" className={`${isMobile ? "h-24" : "h-16"}`} />
+            <nav style={navbarStyle} className={`${isMobile ? 'fixed inset-0 flex-col bg-white space-y-4 w-full' : `mx-12 my-8 justify-between`} flex items-center text-gray-600`}>
+                    <img src="/logo-no-background.png" alt="Logo" className={`${isMobile ? "h-24 mt-20" : "h-16"}`} />
                     <ul className={`${isMobile ? 'flex flex-col pt-12 space-y-20 text-center' : 'flex space-x-16'} list-none`}>
                         <li className={`${isMobile ? 'text-3xl' : 'text-lg'} inline-block mx-4 no-underline`}>
                             <Link href="/">Home</Link>
