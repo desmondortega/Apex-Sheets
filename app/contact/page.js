@@ -1,5 +1,5 @@
 export default function Contact() {
     return (
-        <div>Contact</div>
+        <div className={"flex justify-center items-center text-center"}>UNDER CONSTRUCTION</div>
     )
 }
