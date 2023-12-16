@@ -11,7 +11,7 @@ const Navbar = ({ isMobile, isOpen, setIsOpen }) => {
         <>
             {isMobile && 
                 <button 
-                    className="fixed top-0 right-0 ml-12 mr-8 my-8 bg-transparent z-10"
+                    className="absolute top-0 right-0 ml-12 mr-8 my-8 bg-transparent z-10"
                     onClick={() => setIsOpen(!isOpen)}
                 >   
                     {isOpen ? <FiX className="h-8 w-8 text-gray-600" /> : <FiMenu className="h-8 w-8 text-gray-600" />}
