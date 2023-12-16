@@ -7,9 +7,17 @@ import { useEffect, useState } from 'react';
 
 export default function RootLayout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const isMobileSize = window.innerWidth < 640;
+    setIsMobile(isMobileSize);
+    if (!isMobileSize) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
+
     const handleResize = () => {
       const isMobileSize = window.innerWidth < 640;
       setIsMobile(isMobileSize);
@@ -26,7 +34,7 @@ export default function RootLayout({ children }) {
 
     return () => {
       window.removeEventListener("resize", handleResize);
-    }
+    };
   }, []);
 
   return (
