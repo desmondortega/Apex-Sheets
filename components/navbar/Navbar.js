@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Navbar = ({ isMobile, isOpen, setIsOpen }) => {
     const navbarStyle = {
         transition: 'transform 0.3s ease-out',
-        transform: isOpen ? 'translateY(0)' : 'translateY(-100%)',
+        transform: (isOpen && isMobile) ? 'translateY(0)' : 'translateY(-100%)',
     };
 
     return (
@@ -25,7 +25,7 @@ const Navbar = ({ isMobile, isOpen, setIsOpen }) => {
                 
             }
             <div>
-                <nav style={navbarStyle} className={`${isMobile ? 'fixed inset-0 flex-col bg-apex-green space-y-4 w-full text-white' : `mx-12 my-8 justify-between text-gray-600`} flex items-center`}>
+                <nav style={navbarStyle} className={`${isMobile ? 'fixed inset-0 flex-col bg-apex-green space-y-4 w-full text-white' : `mx-12 mb-8 mt-24 justify-between text-gray-600`} flex items-center`}>
                     <img src={`${isMobile ? "logo-white-no-background.png" : "/logo-no-background.png"}`} alt="Logo" className={`${isMobile ? "h-48 mt-16" : "h-16"}` } />
                     <ul className={`${isMobile ? 'flex flex-col pt-12 space-y-20 text-center' : 'flex space-x-16'} list-none`}>
                         <li className={`${isMobile ? 'text-3xl' : 'text-lg'} inline-block mx-4 no-underline`}>
