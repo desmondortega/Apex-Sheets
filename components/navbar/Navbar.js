@@ -25,8 +25,8 @@ const Navbar = ({ isMobile, isOpen, setIsOpen }) => {
                 
             }
             <div>
-                <nav style={navbarStyle} className={`${isMobile ? 'fixed inset-0 flex-col bg-apex-green space-y-4 w-full text-white overflow-y-auto' : `mx-12 mt-24 justify-between text-gray-600`} flex items-center`}>
-                    <img src={`${isMobile ? "logo-white-no-background.png" : "/logo-no-background.png"}`} alt="Logo" className={`${isMobile ? "h-32 mt-8" : "h-16"}` } />
+                <nav style={navbarStyle} className={`${isMobile ? 'fixed inset-0 flex-col bg-apex-green space-y-4 w-full text-white overflow-y-auto' : `mx-12 mt-32 justify-between text-gray-600`} flex items-center`}>
+                    <img src={`${isMobile ? "logo-white-no-background.png" : "/logo-no-background.png"}`} alt="Logo" className={`${isMobile ? "h-32 mt-8" : "h-24"}` } />
                     <ul className={`${isMobile ? 'flex flex-col pt-12 space-y-20 text-center' : 'flex space-x-16'} list-none`}>
                         <li className={`${isMobile ? 'text-xl' : 'text-lg'} inline-block mx-4 no-underline`}>
                             <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
