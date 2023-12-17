@@ -25,7 +25,7 @@ export async function POST(req) {
   const info = await transporter.sendMail({
     from: process.env.NEXT_PUBLIC_MY_EMAIL,
     to: process.env.NEXT_PUBLIC_BOT_EMAIL,
-    subject: body.email,
+    subject: "Website Interest Form",
     text: fullMessage,
   });
 
