@@ -43,7 +43,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             className="hidden sm:block sm:h-24 sm:mt-0"
           />
           <ul
-            className={`flex flex-col pt-12 space-y-20 text-center sm:flex-row sm:space-y-0 sm:space-x-16 list-none`}
+            className={`flex flex-col sm:pt-12 pt-4 space-y-20 text-center sm:flex-row sm:space-y-0 sm:space-x-16 list-none`}
           >
             <li
               className={`text-3xl inline-block mx-4 no-underline sm:text-2xl`}
