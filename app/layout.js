@@ -3,44 +3,15 @@
 import Footer from '@/components/footer/Footer';
 import './globals.css'
 import Navbar from "@/components/navbar/Navbar";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function RootLayout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const isMobileSize = window.innerWidth < 640;
-    setIsMobile(isMobileSize);
-    if (!isMobileSize) {
-      setIsOpen(true);
-    } else {
-      setIsOpen(false);
-    }
-
-    const handleResize = () => {
-      const isMobileSize = window.innerWidth < 640;
-      setIsMobile(isMobileSize);
-      if (!isMobileSize) {
-        setIsOpen(true);
-      } else {
-        setIsOpen(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <html lang="en">
       <body className='m-0 p-0 bg-gray-200'>
-        <Navbar isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
         <div className={`mt-20 sm:mt-0'}`}>
           {children}
         </div>
