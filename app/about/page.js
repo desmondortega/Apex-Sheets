@@ -14,12 +14,20 @@ export default function About() {
                     </div>
                 </div>   
                 <p className={`sm:text-lg text-sm text-gray-600`}>Based in Los Angeles, CA and currently serving as the Finance Manager for a fast-growing wound care company. In my role, I help manage all financial and accounting related tasks, including bookkeeping for the company. I received my B.S. in Business Administration in 2018, and I am expected to receive my MBA in Accounting in August of 2023. Now I&apos;m ready to use my skills to aid small business owners, like you, have peace of mind when it comes to your business&apos;s finances.</p>
-                <p className={`pt-12 sm:text-lg text-sm text-gray-600`}><u>Why outsource your bookkeeping services?</u></p>
-                <ul className='text-left'>
-                    <li className={`sm:text-lg text-sm text-gray-600 flex items-center`}><FaCheck  className='mr-2'/> <span>No more late nights of date entry and tedious bookkeeping work</span></li>
-                    <li className={`sm:text-lg text-sm text-gray-600 flex items-center`}><FaCheck className='mr-2'/> <span>No time or money spent training employees on bookkeeping</span></li>
-                    <li className={`sm:text-lg text-sm text-gray-600 flex items-center`}><FaCheck className='mr-2'/> <span>Your books are always current and accurate</span></li>
-                    <li className={`sm:text-lg text-sm text-gray-600 flex items-center`}><FaCheck className='mr-2'/> <span>More time available for you to focus on your business</span></li>
+                <p className={`pt-12 sm:text-lg text-gray-600`}><u>Why outsource your bookkeeping services?</u></p>
+                <ul className='pl-6 list-disc text-left'>
+                    <li className={`sm:text-lg text-sm text-gray-600 items-center`}>
+                        Your books are always current and accurate
+                    </li>
+                    <li className={`sm:text-lg text-sm text-gray-600 items-center`}>
+                        No time or money spent training employees on bookkeeping
+                    </li>
+                    <li className={`sm:text-lg text-sm text-gray-600 items-center`}>
+                        Your books are always current and accurate
+                    </li>
+                    <li className={`sm:text-lg text-sm text-gray-600 items-center`}>
+                        More time available for you to <strong className='text-apex-green'><u>focus on your business</u></strong>
+                    </li>
                 </ul>
                 <div className='pt-8 flex justify-center items-center'>
                     <Link href="/service" className={`text-center sm:text-lg text-sm text-gray-100 bg-apex-green py-3 px-5 rounded`}>View Services</Link>
