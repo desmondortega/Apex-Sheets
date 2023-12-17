@@ -10,7 +10,7 @@ export default function Home() {
           <Link href="/about" className={`sm:text-lg text-sm text-gray-100 bg-apex-green py-3 px-5 rounded`}>Learn More</Link>
       </div>
       <div className="sm:w-1/2 sm:min-w-[450px] min-w-[100px] m-4">
-        <Image src="/Home-Page.webp" alt="Home page image" width={1288} height={1072} className='shadow-2xl rounded-xl'/>
+        <Image src="/Home-Page.webp" alt="Home page image" width={1288} height={1072} className='shadow-2xl rounded-xl' priority/>
       </div>
     </div>
   )
