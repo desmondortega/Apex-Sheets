@@ -9,7 +9,7 @@ export default function Contact() {
         </h1>
         <p className="pb-8 sm:text-md text-sm">
           Interested in outsourcing your bookkeeping services? Fill out your
-          contact and business information in the form. I'll reach out to
+          contact and business information in the form. I&apos;ll reach out to
           schedule a consultation, and answer any questions you may have.
         </p>
         <p className="sm:text-md text-sm">Have any additional questions?</p>
