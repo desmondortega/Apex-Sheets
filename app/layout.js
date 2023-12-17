@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className='m-0 p-0 bg-gray-200'>
         <Navbar isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
-        <div className={`${!isMobile ? 'mt-6' : 'mt-20'}`}>
+        <div className={`${!isMobile ? 'mt-0' : 'mt-20'}`}>
           {children}
         </div>
         <Footer className={"mt-40"} />
