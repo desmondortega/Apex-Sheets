@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-center-justify {
+    text-align: justify;
+    text-align-last: center;
+}
