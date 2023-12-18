@@ -20,6 +20,8 @@ export async function POST(req) {
     Business Name: ${body.businessName}
     Business Type: ${body.businessType}
     Website: ${body.website}
+    
+    Message: ${body.message}
   `;
 
   const info = await transporter.sendMail({

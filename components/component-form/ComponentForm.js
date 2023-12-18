@@ -8,6 +8,9 @@ const ContactForm = () => {
   const [businessName, setBusinessName] = useState("");
   const [businessType, setBusinessType] = useState("");
   const [website, setWebsite] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,21 +25,28 @@ const ContactForm = () => {
           businessName,
           businessType,
           website,
+          message,
         }),
         headers: {
           "content-type": "application/json",
         },
       });
+
+      if (res.ok) {
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setBusinessName("");
+        setBusinessType("");
+        setWebsite("");
+        setMessage("");
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
     } catch (err) {
       console.log("Err", err);
     }
-
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setBusinessName("");
-    setBusinessType("");
-    setWebsite("");
   };
 
   return (
@@ -45,7 +55,7 @@ const ContactForm = () => {
         <div className="flex space-x-4">
           <div className="flex-1">
             <label htmlFor="firstName" className="sm:text-md text-sm">
-              First Name
+              First Name <span className="text-red-700">*</span>
             </label>
             <input
               id="firstName"
@@ -53,11 +63,12 @@ const ContactForm = () => {
               className="w-full border-b border-black focus:outline-none mt-3"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
+              required
             />
           </div>
           <div className="flex-1">
             <label htmlFor="lastName" className="sm:text-md text-sm">
-              Last Name
+              Last Name <span className="text-red-700">*</span>
             </label>
             <input
               id="lastName"
@@ -65,13 +76,14 @@ const ContactForm = () => {
               className="w-full border-b border-black focus:outline-none mt-3"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
+              required
             />
           </div>
         </div>
 
         <div>
           <label htmlFor="email" className="sm:text-md text-sm">
-            Email
+            Email <span className="text-red-700">*</span>
           </label>
           <input
             id="email"
@@ -79,13 +91,14 @@ const ContactForm = () => {
             className="w-full border-b border-black focus:outline-none mt-3"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
 
         <div className="flex space-x-4">
           <div className="flex-1">
             <label htmlFor="businessName" className="sm:text-md text-sm">
-              Business Name
+              Business Name <span className="text-red-700">*</span>
             </label>
             <input
               id="businessName"
@@ -93,11 +106,12 @@ const ContactForm = () => {
               className="w-full border-b border-black focus:outline-none mt-3"
               value={businessName}
               onChange={(e) => setBusinessName(e.target.value)}
+              required
             />
           </div>
           <div className="flex-1">
             <label htmlFor="businessType" className="sm:text-md text-sm">
-              Business Type
+              Business Type <span className="text-red-700">*</span>
             </label>
             <input
               id="businessType"
@@ -105,6 +119,7 @@ const ContactForm = () => {
               className="w-full border-b border-black focus:outline-none mt-3"
               value={businessType}
               onChange={(e) => setBusinessType(e.target.value)}
+              required
             />
           </div>
         </div>
@@ -122,6 +137,20 @@ const ContactForm = () => {
             onChange={(e) => setWebsite(e.target.value)}
           />
         </div>
+
+        <div>
+          <label htmlFor="message" className="sm:text-md text-sm">
+            Message
+          </label>
+          <textarea
+            id="message"
+            className="w-full border-b border-black focus:outline-none mt-3 mb-3 text-sm"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            rows="3"
+          />
+        </div>
+
         <div className="flex justify-center items-center">
           <button
             type="submit"
@@ -130,6 +159,17 @@ const ContactForm = () => {
             Get Started
           </button>
         </div>
+
+        {status === "success" && (
+          <p className="text-apex-green text-center">
+            Email sent successfully!
+          </p>
+        )}
+        {status === "error" && (
+          <p className="text-red-700 text-center">
+            Failed to send message. Please try again.
+          </p>
+        )}
       </div>
     </form>
   );
