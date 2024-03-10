@@ -9,7 +9,7 @@ export default function Service() {
             <div className={"flex justify-center items-center text-center"}>
                 <div className="flex flex-col space-y-8">
                     <h1 className={`sm:text-6xl text-5xl text-apex-green`}>Services</h1>
-                    <h2 className="text-gray-600 sm:mx-0 mx-4 text-lg">Note: Work is completed from my home office during non-traditional business hours</h2>
+                    <h2 className="text-gray-600 sm:mx-0 mx-4 text-lg">Note: Most work is completed during non-traditional business hours</h2>
                     <div className="pt-6 sm:min-w-[900px] flex sm:flex-row flex-col sm:space-y-0 space-y-12">
                         <div className="sm:w-1/3 mx-12 flex flex-col items-center">
                             <FaListCheck color="#1e293b" size={70}/>
@@ -51,8 +51,8 @@ export default function Service() {
                     <ul className="mx-12 list-disc text-left text-gray-600">
                         <li className="pb-4">Clean up period and first month(s) will be done at an hourly rate.</li>
                         <li className="pb-4">Once things are cleaned up and set, we will agree on a fixed monthly rate so you know how much you&apos;ll pay each month.</li>
-                        <li className="pb-4">Monthly rates start at <span className="text-green-600">$300/month</span>.</li>
-                        <li className="pb-4">10% rate discount is available for pre-payment and commitment of 1 full year of service</li>
+                        <li className="pb-4">Monthly rates start at <span className="text-green-600">$500/month</span>.</li>
+                        <li className="pb-4">15% rate discount is available for pre-payment and commitment of 1 full year of service</li>
                         <li>Sound good? Click the button below to fill out a form.</li>
                     </ul>
                     <div className='flex justify-center items-center'>
